@@ -1,0 +1,12 @@
+server:
+#配置端口
+  port: 8080
+#配置路径
+#  context-path: /girl
+girl:
+  cupSize: B
+  age: 18
+
+Archer: Emiya
+Saber: Aertoria
+content: "Archer: ${Archer}, Saber: ${Saber}"
