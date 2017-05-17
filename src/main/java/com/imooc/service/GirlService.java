@@ -1,6 +1,7 @@
 package com.imooc.service;
 
 import com.imooc.domain.Girl;
+import com.imooc.exception.GirlException;
 import com.imooc.repository.GirlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,12 +35,12 @@ public class GirlService {
     public void JudgeAge(Integer id) throws Exception{
         Girl girl=girlRepository.findOne(id);
         Integer age=girl.getAge();
-        if(age<18){
+        if(age<=18){
             //返回 Too small
-            throw new Exception("Too small");
-        }else if(age>=18){
+            throw new GirlException(100,"Too small");
+        }else if(age>18&&age<27){
             //返回 Not big enough
-            throw new Exception("Big enough");
+            throw new GirlException(101,"Big enough");
         }
     }
 }
