@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
  * Created by Dell on 2017-5-12.
  */
 @Entity
+//实现属性映射数据库字段
 public class Girl {
     @Id
     @GeneratedValue//自增Integer
