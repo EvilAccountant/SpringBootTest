@@ -1,8 +1,10 @@
 package com.imooc.service;
 
 import com.imooc.domain.Girl;
+import com.imooc.enums.ResultEnum;
 import com.imooc.exception.GirlException;
 import com.imooc.repository.GirlRepository;
+import com.imooc.utils.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,12 +37,23 @@ public class GirlService {
     public void JudgeAge(Integer id) throws Exception{
         Girl girl=girlRepository.findOne(id);
         Integer age=girl.getAge();
-        if(age<=18){
+        if(age<18){
             //返回 Too small
-            throw new GirlException(100,"Too small");
-        }else if(age>18&&age<27){
+            throw new GirlException(ResultEnum.TOO_SMALL);
+        }else if(age>=18&&age<24){
             //返回 Not big enough
-            throw new GirlException(101,"Big enough");
+            throw new GirlException(ResultEnum.BIG_ENOUGH);
+        }else if(age>=24&&age<30){
+            throw new GirlException(ResultEnum.TOO_BIG);
         }
+    }
+
+    /**
+     * 查找一个girl
+     * @param id
+     * @return
+     */
+    public Girl findOne(Integer id){
+        return girlRepository.findOne(id);
     }
 }
