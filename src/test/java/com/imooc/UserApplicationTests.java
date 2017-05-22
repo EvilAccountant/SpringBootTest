@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 //单元测试类
-public class GirlApplicationTests {
+public class UserApplicationTests {
 
 	@Test
 	public void contextLoads() {

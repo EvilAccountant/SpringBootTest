@@ -1,6 +1,6 @@
 package com.imooc.service;
 
-import com.imooc.GirlApplicationTests;
+import com.imooc.UserApplicationTests;
 import com.imooc.domain.Girl;
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 ////表示运行整个SpringBoot
 
 //继承ApplicationTests则不需要以上两个注解
-public class GirlServiceTest extends GirlApplicationTests {
+public class GirlServiceTest extends UserApplicationTests {
 
     @Autowired
     private GirlService girlService;

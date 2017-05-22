@@ -1,6 +1,6 @@
 package com.imooc.controller;
 
-import com.imooc.GirlApplicationTests;
+import com.imooc.UserApplicationTests;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -13,7 +13,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
  * Created by Dell on 2017-5-18.
  */
 @AutoConfigureMockMvc
-public class GirlControllerTest extends GirlApplicationTests{
+public class GirlControllerTest extends UserApplicationTests {
 
     @Autowired
     private MockMvc mvc;
